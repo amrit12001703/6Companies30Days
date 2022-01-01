@@ -6,6 +6,6 @@ class Solution {
            return false;
        if(R1[1]>L2[1]||R2[1]>L1[1])
            return false;
-       return true;
+       return  true;
     }
 };
