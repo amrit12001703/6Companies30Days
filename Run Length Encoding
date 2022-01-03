@@ -7,7 +7,7 @@ string encode(string src)
      while(i<src.size()-1 && src[i]==src[i+1]){
          c++; i++;
     }
-   cout<<src[i]<<c;      
+   cout<<src[i]<<c ;      
  }
  
 }   
