@@ -1,0 +1,6 @@
+long long countWays(int m)
+    {
+        // your code here
+        long long ans=m/2+1;
+        return ans;
+    }
