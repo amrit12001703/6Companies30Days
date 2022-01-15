@@ -34,7 +34,7 @@ void connect(Node *root)
                 bfs[idx]->nextRight = bfs[idx+1];
             }
             idx++;
-            value--;
+            value--; 
         }
     }
        
