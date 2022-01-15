@@ -12,5 +12,5 @@ int dp[10001];
     {
         // Your code here
         memset(dp,-1,sizeof(dp));
-        return solve(arr,n-1);
+        return solve(arr,n-1); 
     }
