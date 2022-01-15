@@ -20,3 +20,4 @@ vector<string> generate(int N){
 	}
 	return ans;
 }
+ 
