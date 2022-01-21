@@ -4,4 +4,4 @@ Q.16-30 : Amazon
 <br>
 Q.31-45 : Microsoft
 <br>
-Day 46-60 : Adobe
+Q.46-60 : Adobe
