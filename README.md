@@ -1,7 +1,7 @@
-Day 1-5 : Goldman Sachs
+Q.1-15 : Goldman Sachs
 <br>
-Day 6-10 : Amazon
+Q.16-30 : Amazon
 <br>
-Day 11-15 : Microsoft
+Q.31-45 : Microsoft
 <br>
-Day 16-20 : Adobe
+Day 46-60 : Adobe
