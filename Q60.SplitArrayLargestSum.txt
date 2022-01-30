@@ -1,0 +1,35 @@
+class Solution {
+public:
+    int splitArray(vector<int>& nums, int m) {
+        int s=0,e=0;
+        
+        for(int i=0;i<nums.size();i++){
+            s = max(s,nums[i]);
+            e += nums[i];
+        }
+        
+        while(s<e){
+            int mid = s + (e-s)/2;
+            
+           
+            int sum=0;
+            int count=1;
+            
+            for(int i=0;i<nums.size();i++){
+                if(sum+nums[i] > mid){
+                    sum = nums[i];
+                    count++;
+                } else{
+                    sum += nums[i];
+                }
+            }
+           
+            if(count <= m){
+                e=mid;
+            } else{
+                s=mid+1;
+            }
+        }
+        return e;
+    }
+};

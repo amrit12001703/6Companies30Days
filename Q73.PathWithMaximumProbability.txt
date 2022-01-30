@@ -1,0 +1,37 @@
+class Solution {
+public:
+    struct cmp{
+      bool operator()(pair<int,double> &p1, pair<int,double>& p2){
+          return p1.second < p2.second;
+      }  
+    };
+    
+    double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end) {
+        
+        vector<vector<pair<int,double>>> graph(n);
+        for(int i=0; i<edges.size(); ++i){
+            graph[edges[i][0]].push_back({edges[i][1],succProb[i]});
+            graph[edges[i][1]].push_back({edges[i][0],succProb[i]});
+        }
+        
+        priority_queue<pair<int,double>,vector<pair<int,double>>, cmp> pq;
+        vector<double> prob(n,DBL_MIN);
+        pq.push({start,1});
+        prob[start] = 1;
+        
+        while(!pq.empty()){
+            int cur = pq.top().first;
+            double val = pq.top().second;
+            pq.pop();
+            
+            for(auto &child : graph[cur]){
+                if(val*child.second > prob[child.first]){
+                    prob[child.first] = val*child.second;
+                    pq.push({child.first,prob[child.first]});
+                }
+            }
+        }
+        
+        return prob[end]==DBL_MIN ? 0 : prob[end];
+    }
+};
