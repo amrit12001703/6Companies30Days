@@ -6,6 +6,6 @@ Q.31-45 : Microsoft
 <br>
 Q.46-60 : Adobe
 <br>
-Q.61-69 : Intuit
+Q.61-75 : Intuit
 <br>
-Q70- :Walmart
+Q75-90 :Walmart
